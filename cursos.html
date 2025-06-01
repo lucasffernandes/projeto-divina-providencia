@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cursos Disponíveis </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4e4;
+    text-align: center;
+}
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.curso {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.balão {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #0b8043;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+    #ancora {
+        text-align: left;
+        padding-left: 40px;
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+    <a href="index.html">
+    <p id="ancora">VOLTAR</p>
+    </a>
+    <h1>Cursos Disponíveis</h1>
+    <p>Aqui estão os nossos cursos disponíveis. Clique em "saiba mais", e faça a sua matrícula!</p>
+
+    <div class="cursos">
+        <div class="curso">
+            <h3>Informática Básica</h3>
+            <button class="saiba-mais" onclick="mostrarBalão()">SAIBA MAIS</button>
+        </div>
+        <div class="curso">
+            <h3>Informática Continuada</h3>
+            <button class="saiba-mais" onclick="mostrarBalão()">SAIBA MAIS</button>
+        </div>
+        <div class="curso">
+            <h3>Massoterapia</h3>
+            <button class="saiba-mais" onclick="mostrarBalão()">SAIBA MAIS</button>
+        </div>
+        <div class="curso">
+            <h3>Pedras Quentes</h3>
+            <button class="saiba-mais" onclick="mostrarBalão()">SAIBA MAIS</button>
+        </div>
+        <div class="curso">
+            <h3>Barbearia Inicial</h3>
+            <button class="saiba-mais" onclick="mostrarBalão()">SAIBA MAIS</button>
+        </div>
+        <div class="curso">
+            <h3>Barbearia Avançada</h3>
+            <button class="saiba-mais" onclick="mostrarBalão()">SAIBA MAIS</button>
+        </div>
+    </div>
+
+<div id="balão" class="balão" style="display: none;">
+    <p>Temos uma equipe disponível para te atender, e tirar suas dúvidas. Deseja ser direcionado para o WhatsApp?</p>
+    <button onclick="window.open('https://api.whatsapp.com/send?phone=5531986340676&text=Olá!');">Sim</button>
+    <button onclick="fecharBalão()">Voltar</button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
