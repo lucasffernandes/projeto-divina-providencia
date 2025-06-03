@@ -6,65 +6,165 @@
     <link rel="stylesheet" href="styles.css">
     <title>Divina Providência</title>
     <style>
-        body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f8f8;
+
+            /* TELAS GRANDES */
+        * {
+            margin: 0px;
+            padding: 0px;
         }
 
-        header {
-            background-color: #f9f9f9;
-            padding: 20px;
+        main {
+            font-family: 'codec', sans-serif;
+
+            background-image: url('imagens/Imagem-inicial-divina-grande.png');
+            background-size: cover; /* A imagem cobre toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-attachment: fixed; /* A imagem permanece fixa durante o scroll */
+            height: 100vh;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
+            padding: 20px;
             display: flex;
-            justify-content: space-around;
+            padding-top: 60px;
         }
 
         nav ul li {
             display: inline;
+            padding: 8px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: #000000;
             font-weight: bold;
+            font-size: 0.6em;
         }
 
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
+        #conteudo {
+            font-size: 1.6em;
+            margin: 110px 0px 0px 35px;
         }
 
-        .content {
-            max-width: 50%;
+        section h1 {
+            color: #888f70;
         }
 
-        .content h1 {
-            font-size: 2.5em;
-            color: #4a4a4a;
+        section p {
+            color: #8c6052;
+            font-size: 0.3em;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 85px;
         }
 
-        .content p {
-            font-size: 1.2em;
-            color: #777;
-        }
+          /* TELAS MEDIAS */
 
-        .image img {
-            max-width: 100%;
-            height: auto;
+        @media (max-width:700px) {
+                main {
+                    font-family: 'codec', sans-serif;
+
+                    background-image: url(imagens/imagem-fundo-celular-medio.png);
+                    background-size: cover; /* A imagem cobre toda a tela */
+                    background-position: center; /* Centraliza a imagem */
+                    background-attachment: fixed; /* A imagem permanece fixa durante o scroll */
+                    height: 100vh;
+                }
+
+            nav ul {
+                list-style: none;
+                padding: 20px;
+                display: flex;
+                padding-top: 100px;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                display: block;
+                padding: 8px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #000000;
+                font-weight: bold;
+                font-size: 0.6em;
+            }
+
+            #conteudo {
+                font-size: 1.6em;
+                margin: 110px 0px 0px 35px;
+            }
+
+            section h1 {
+                color: #888f70;
+            }
+
+            section p {
+                color: #8c6052;
+                font-size: 0.3em;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-left: 85px;
+            }
+        }
+                /* TELAS PEQUENAS */
+
+                @media (max-width:609px) {
+                main {
+                    font-family: 'codec', sans-serif;
+
+                    background-image: url(imagens/imagem-fundo-celular-pequeno.png);
+                    background-size: cover; /* A imagem cobre toda a tela */
+                    background-position: center; /* Centraliza a imagem */
+                    background-attachment: fixed; /* A imagem permanece fixa durante o scroll */
+                    height: 100vh;
+                }
+
+            nav ul {
+                list-style: none;
+                padding: 20px;
+                display: flex;
+                padding-top: 100px;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                display: block;
+                padding: 8px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #000000;
+                font-weight: bold;
+                font-size: 0.6em;
+            }
+
+            #conteudo {
+                font-size: 1.6em;
+                margin: 210px 0px 0px 35px;
+            }
+
+            section h1 {
+                color: #888f70;
+            }
+
+            section p {
+                color: #8c6052;
+                font-size: 0.3em;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-left: 85px;
+            }
         }
 
     </style>
 </head>
 <body>
-    <header>
+
+    <main>
         <nav>
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -73,17 +173,16 @@
                 <li><a href="sobre.html">SOBRE</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="content">
-                <h1>Divina Providência</h1>
+
+        <section>
+            <div id="conteudo">
+                <h1>Divina</h1>
+                <h1>Providência</h1>
                 <p>UNIDADE: RAFAEL ZICA GEO</p>
-            </div>
-            <div class="image">
-                <img src="imagens/background-pagina-inicial.png" alt="Imagem do grupo" />
             </div>
         </section>
     </main>
+    <footer>
+    </footer>
 </body>
 </html>
