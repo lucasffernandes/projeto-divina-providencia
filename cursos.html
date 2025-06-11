@@ -246,17 +246,28 @@
   </main>
 
   <script>
-    function mostrarBalao() {
-      document.getElementById('balao').style.display = 'block';
-    }
+    // function mostrarBalao() {
+    //   document.getElementById('balao').style.display = 'block';
+    // }
 
-    function fecharBalao() {
-      document.getElementById('balao').style.display = 'none';
-    }
+    // function fecharBalao() {
+    //   document.getElementById('balao').style.display = 'none';
+    // }
 
+    // function irParaWhatsapp() {
+    //   window.open("https://wa.me/5531986340676", "_blank"); // Substitua pelo seu número real
+    // }
+       function mostrarBalao(button) {
+      const balao = button.parentElement.querySelector('.balao');
+      balao.style.display = 'block';
+    }
+    function fecharBalao(button) {
+      const balao = button.closest('.balao');
+      balao.style.display = 'none';
+    }
     function irParaWhatsapp() {
       window.open("https://wa.me/5531986340676", "_blank"); // Substitua pelo seu número real
-    }
+    } 
   </script>
 
 </body>
