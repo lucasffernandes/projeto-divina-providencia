@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso</title>
-    <style>
+  <style>
     body {
       font-family: 'codec', sans-serif;
       height: 100vh;
@@ -15,14 +15,14 @@
     }
 
     header {
-      text-align: center; /* Centraliza o título e o parágrafo */
-      width: 100%; /* Garante que o header ocupe toda a largura */
+      text-align: center;
+      width: 100%;
     }
 
     header a {
-      text-align: left; /* Alinha o link à esquerda */
-      display: block; /* Faz o link ocupar toda a largura */
-      width: fit-content; /* Ajusta a largura do link */
+      text-align: left;
+      display: block;
+      width: fit-content;
       padding-left: 50px;
       font-size: 0.8em;
       text-decoration: none;
@@ -38,8 +38,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */
-      margin-top: 20px; /* Espaço entre o header e os cards */
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .card {
@@ -50,7 +50,7 @@
       position: relative;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 180px;
-      margin: 10px; /* Espaço entre os cards */
+      margin: 10px;
     }
 
     .card img {
@@ -72,10 +72,10 @@
 
     .balao {
       display: none;
-      position: fixed; /* Muda para fixed */
-      top: 50%; /* Centraliza verticalmente */
-      left: 50%; /* Centraliza horizontalmente */
-      transform: translate(-50%, -50%); /* Ajusta para o centro */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 300px;
       background: #fff;
       border: 2px solid #000;
@@ -112,6 +112,57 @@
     .botoes-balao button:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 40%;
+        margin: 10px auto;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      header p {
+        font-size: 0.7em;
+      }
+
+      .botao {
+        padding: 10px 15px;
+        font-size: 0.9em;
+      }
+
+      .balao {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      header h1 {
+        font-size: 1.7em;
+        padding: 50px 0px 10px 0px;
+      }
+
+      header a {
+        padding-left: 20px;
+        font-weight: bold;
+      }
+
+      header p {
+        padding-bottom: 10px;
+        font-size: 0.9em;
+      }
+
+      .botao {
+        padding: 8px 10px;
+        font-size: 0.8em;
+      }
+
+      .balao {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -129,129 +180,133 @@
     <div class="card">
       <img src="imagens/informatica-inicial(pixabay).jpg" alt="Imagem Informática Básica">
       <h3>Informática Básica</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
+      <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
       <div class="balao">
         <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
         <div class="botoes-balao">
           <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
+          <button onclick="fecharBalao(0)">VOLTAR</button>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <img src="imagens/informatica-continuada(unsplash).jpg" alt="imagem Informática Continuada">
-      <h3>Informática Continuada</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+  <img src="imagens/informatica-continuada(unsplash).jpg" alt="imagem Informática Continuada">
+  <h3>Informática Continuada</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/massoterapia(unsplash).jpg" alt="Imagem curso de massoterapia">
-      <h3>Massoterapia</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+<div class="card">
+  <img src="imagens/massoterapia(unsplash).jpg" alt="Imagem curso de massoterapia">
+  <h3>Massoterapia</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/pedras-quentes(unsplash).jpg" alt="Imagem curso pedras quentes">
-      <h3>Pedras Quentes</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+<div class="card">
+  <img src="imagens/pedras-quentes(unsplash).jpg" alt="Imagem curso pedras quentes">
+  <h3>Pedras Quentes</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/barbearia-inicial(unsplash).jpg" alt="Imagem curso Barbearia Inicial">
-      <h3>Barbearia Inicial</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+<div class="card">
+  <img src="imagens/barbearia-inicial(unsplash).jpg" alt="Imagem curso Barbearia Inicial">
+  <h3>Barbearia Inicial</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/cabelereiro-especializacao(unsplash).jpg" alt="Imagem curso Barbearia Avançada">
-      <h3>Barbearia Avançada</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-        </div>
+<div class="card">
+  <img src="imagens/cabelereiro-especializacao(unsplash).jpg" alt="Imagem curso Barbearia Avançada">
+  <h3>Barbearia Avançada</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+    </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/cabelereiro(unsplash).jpg" alt="Imagem curso cabelereiro">
-      <h3>Cabelereiro</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+<div class="card">
+  <img src="imagens/cabelereiro(unsplash).jpg" alt="Imagem curso cabelereiro">
+  <h3>Cabelereiro</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/trancista-inicial (unsplash).jpg" alt="Imagem curso Trancista Inicial">
-      <h3>Trancista Inicial</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+<div class="card">
+  <img src="imagens/trancista-inicial (unsplash).jpg" alt="Imagem curso Trancista Inicial">
+  <h3>Trancista Inicial</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-      <img src="imagens/pizzas-especiais(unsplash).jpg" alt="Imagem curso Pizzas Especiais">
-      <h3>Pizzas Especiais</h3>
-      <button class="botao" onclick="mostrarBalao()">SAIBA MAIS</button>
-      <div class="balao" id="balao">
-        <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
-        <div class="botoes-balao">
-          <button onclick="irParaWhatsapp()">SIM</button>
-          <button onclick="fecharBalao()">VOLTAR</button>
-        </div>
-      </div>
+<div class="card">
+  <img src="imagens/pizzas-especiais(unsplash).jpg" alt="Imagem curso Pizzas Especiais">
+  <h3>Pizzas Especiais</h3>
+  <button class="botao" onclick="mostrarBalao(0)">SAIBA MAIS</button>
+  <div class="balao" id="balao">
+    <p>TEMOS UMA EQUIPE DISPONÍVEL PARA TE ATENDER, E TIRAR SUAS DÚVIDAS.<br>DESEJA SER DIRECIONADO PARA O WHATSAPP?</p>
+    <div class="botoes-balao">
+      <button onclick="irParaWhatsapp()">SIM</button>
+      <button onclick="fecharBalao()">VOLTAR</button>
     </div>
+  </div>
+</div>
+
+    <!-- Repita para os outros cards, alterando o índice no onclick -->
 
   </main>
 
   <script>
-    function mostrarBalao() {
-      document.getElementById('balao').style.display = 'block';
+    function mostrarBalao(index) {
+      const baloes = document.querySelectorAll('.balao');
+      baloes[index].style.display = 'block';
     }
 
-    function fecharBalao() {
-      document.getElementById('balao').style.display = 'none';
+    function fecharBalao(index) {
+      const baloes = document.querySelectorAll('.balao');
+      baloes[index].style.display = 'none';
     }
 
     function irParaWhatsapp() {
