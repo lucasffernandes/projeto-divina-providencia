@@ -1,111 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Entre em contato</title>
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #4F6D7A;
-    color: white;
-    margin: 0;
-    text-align: center;
-}
+            font-family: 'codec', sans-serif;
+            background-color: #113801;
+            color: #eff0ec;
+        }
 
-.container {
-    padding: 20px;
-}
+        header {
+            height: 100px;
+        }
 
-.header {
-    margin-bottom: 20px;
-}
+        header p {
+            padding: 80px 0px 0px 100px;
+        }
 
-.voltar {
-    text-decoration: none;
-    color: white;
-}
+        a {
+            color: #eff0ec;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.logo {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    margin-bottom: 20px;
-}
+        main {
+            display: flex;        
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;     /* Centraliza verticalmente */
+        }
 
-.contact-info {
-    margin: 20px 0;
-}
+        #caixa-logo {
+            text-align: center;
+            padding-bottom: 50px;
+            width: 300px;
+            height: 200px;
+            overflow: hidden; /* corta se a imagem ultrapassar */
+        }
 
-.social-media {
-    margin-top: 20px;
-}
+        #caixa-logo img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
 
-.social {
-    display: inline-block;
-    margin: 5px;
-    text-decoration: none;
-    color: #E94343; /* Cor das redes sociais */
-}
+        footer {
+            display: flex;
+            text-align: center; 
+            flex-wrap: wrap;
+            padding-left: 50px;
+        }
 
-.contact-section {
-    text-align: center;
-    background-color: #4CAF50; /* cor de fundo */
-    padding: 20px;
-    color: white;
-}
+        footer div {
+            margin: auto;
+        }
 
-.contact-header h1 {
-    margin: 10px 0;
-}
+        footer h2 {
+            color: #d4ddb7;
+        }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* espacamento entre os titulos */
-}
+        footer p {
+            font-size: 0.7em;
+        }
 
-.contact-item {
-    background: rgba(255, 255, 255, 0.2); /* fundo levemente visível */
-    padding: 10px;
-    border-radius: 8px;
-}
+        #wpp {
+            padding-left: 60px;
+        }
 
-    #ancora {
-        text-align: left;
-        padding-left: 40px;
-        color: black;
-    }
+        .button {
+            display: block;                
+            margin-top: 7px;
+            background-color: #464986;
+            color: rgb(194, 194, 194);
+            font-weight: bold;
+            font-size: 0.7em;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 30px;
+            cursor: pointer;
 
-    a {
-        text-decoration: none;
-    }
+        }
 
+        #sdp {
+            margin-left: 23px;
+            padding-left: 50px;
+        }
 
+        /* Media Query para telas menores */
+        @media (max-width: 500px) {
+            footer {
+                flex-direction: column; /* Elementos um abaixo do outro */
+                align-items: center; /* Centraliza itens verticalmente */
+            }
+
+            footer div {
+                margin: 10px 0; /* Espaço entre os elementos do footer */
+            }
+
+            header p {
+                padding-left: 25px;
+                font-size: 0.8em;
+            }
+
+            footer {
+                padding-left: 0px;
+            }
+
+            #wpp {
+                padding-left: 0px;
+            }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html">
-    <p id="ancora">VOLTAR</p>
-    </a>
-
-    <div class="contact-section">
-    <div class="contact-header">
-        <h1>Entre em contato</h1>
-    </div>
-    <div class="contact-info">
-        <div class="contact-item">
+    <header>
+        <a href="index.html">
+            <p>VOLTAR</p>
+        </a>
+    </header>
+    <main>
+        <div id="caixa-logo">
+            <img src="imagens/divina providencia logo.png" alt="Logo divina providência">
+            <h1>Entre em contato</h1>
+        </div>
+        
+    </main>
+    <footer>
+        <div>
             <h2>Telefone</h2>
-            <p>(31) 3517-3994<br>(31) 3517-3993</p>
+            <p>(31) 3517-3994</p>
+            <p>(31) 3517-3993</p>
         </div>
-        <div class="contact-item">
+        <div id="wpp">
             <h2>WhatsApp</h2>
-            <p>(31) 9 8634-0676</p>
+            <button class="button" aria-label="Saiba mais sobre o curso de salgados" onclick="window.location.href='https://wa.me/5531986340676';">
+                (31) 9 8634-0676
+            </button>
         </div>
-        <div class="contact-item">
+        <div id="redes-sociais">
             <h2>Redes sociais</h2>
-            <p>CENTRO DE FORMAÇÃO PROFISSIONAL<br>SISTEMA DIVINA PROVIDÊNCIA</p>
+            <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/centrosdeformacaoprofissional';">CENTRO DE FORMAÇÃO PROFISSIONAL</button>
+            <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/sistemadivinaprovidencia?igsh=MWhrenY5MTIwdjJ1aQ=='">SISTEMA DIVINA PROVIDÊNCIA</button>
+            
         </div>
-    </div>
-</div>
+    </footer>
 </body>
 </html>
