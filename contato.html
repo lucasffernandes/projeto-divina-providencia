@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contato</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
     body {
         font-family: 'codec', sans-serif;
@@ -16,14 +18,19 @@
         height: 100px;
     }
 
-    header p {
+    header ul {
         padding: 80px 0px 0px 100px;
     }
 
-    a {
+    ul a{
         color: #eff0ec;
         text-decoration: none;
         font-weight: bold;
+        list-style: none;
+    }
+
+    ul li {
+        display: inline-block;
     }
 
     main {
@@ -75,18 +82,23 @@
         background-color: #278d46;
     }
 
+    #wpp i {
+        margin-right: 8px;
+        font-size: 1.2em;
+    }
+
     #redes-sociais button {
         background-color: #ed6866;
         margin-left: 23px;
-        padding-left: 50px;
+        padding-left: 35px;
     }
 
     .button {
         display: block;                
         margin-top: 7px;
         background-color: #464986;
-        color: rgb(194, 194, 194);
-        font-weight: bold;
+        color: rgb(213, 211, 203, 1);
+        font-weight:bold;
         font-size: 0.9em;
         border: none;
         border-radius: 30px;
@@ -98,6 +110,11 @@
     #redes-sociais #sdp {
         margin-top: 10px;
         margin-left: 50px;
+    }
+
+    #redes-sociais i {
+        margin-right: 5px;
+        font-size: 1.2em;
     }
 
     #telefone {
@@ -130,9 +147,13 @@
             margin: 10px 0; /* Espaço entre os elementos do footer */
         }
 
-        header p {
+        header a {
             padding-left: 25px;
             font-size: 0.8em;
+        }
+
+        header ul {
+            padding: 70px 0px 0px 20px;
         }
 
         footer {
@@ -149,9 +170,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html">
-        <p>VOLTAR</p>
-    </a>
+    <UL><a href="index.html"><li>VOLTAR</li></a></UL>
 </header>
 <main>
     <div id="caixa-logo">
@@ -169,13 +188,13 @@
     <div id="wpp">
         <h2>WhatsApp</h2>
         <button class="button" aria-label="Saiba mais sobre o curso de salgados" onclick="window.location.href='https://wa.me/5531986340676';">
-            (31) 9 8634-0676
+            (31) 9 8634-0676 <i class="fa fa-whatsapp"></i>
         </button>
     </div>
     <div id="redes-sociais">
         <h2>Redes sociais</h2>
-        <button class="button" onclick="window.location.href='https://www.instagram.com/centrosdeformacaoprofissional';">CENTRO DE FORMAÇÃO PROFISSIONAL</button>
-        <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/sistemadivinaprovidencia?igsh=MWhrenY5MTIwdjJ1aQ=='">SISTEMA DIVINA PROVIDÊNCIA          </button>
+        <button class="button" onclick="window.location.href='https://www.instagram.com/centrosdeformacaoprofissional';"><i class="fa fa-instagram" aria-hidden="true"></i>CENTRO DE FORMAÇÃO PROFISSIONAL</button>
+        <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/sistemadivinaprovidencia?igsh=MWhrenY5MTIwdjJ1aQ=='"><i class="fa fa-instagram" aria-hidden="true"></i>SISTEMA DIVINA PROVIDÊNCIA          </button>
         
     </div>
 </footer>
