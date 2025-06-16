@@ -1,150 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'codec', sans-serif;
-            background-color: #113801;
-            color: #eff0ec;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    body {
+        font-family: 'codec', sans-serif;
+        background-color: #113801;
+        color: #eff0ec;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    header p {
+        padding: 80px 0px 0px 100px;
+    }
+
+    a {
+        color: #eff0ec;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    main {
+        display: flex;        
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        margin-bottom: 90px;
+    }
+
+    #caixa-logo {
+        text-align: center;
+        padding-bottom: 50px;
+        width: 300px;
+        height: 200px;
+        overflow: hidden; /* corta se a imagem ultrapassar */
+    }
+
+    #caixa-logo img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    footer {
+        display: flex;
+        text-align: center; 
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+
+    footer div {
+        margin: auto;
+    }
+
+    footer h2 {
+        color: #d4ddb7;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    #wpp {
+        padding-left: 180px;
+        padding-bottom: 40px;
+    }
+
+    #wpp button {
+        background-color: #278d46;
+    }
+
+    #redes-sociais button {
+        background-color: #ed6866;
+        margin-left: 23px;
+        padding-left: 50px;
+    }
+
+    .button {
+        display: block;                
+        margin-top: 7px;
+        background-color: #464986;
+        color: rgb(194, 194, 194);
+        font-weight: bold;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 30px;
+        cursor: pointer;
+
+    }
+
+    #redes-sociais #sdp {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+
+    #telefone {
+        padding-left: 50px;
+        padding-bottom: 20px;
+    }
+
+    @media (max-width: 950px) {
+
+        #wpp {
+            padding-left: 0px;
         }
 
-        header {
-            height: 100px;
-        }
+        #telefone {
 
-        header p {
-            padding: 80px 0px 0px 100px;
-        }
+        padding-left: 0px;
+        padding-bottom: 20px;
+    }
 
-        a {
-            color: #eff0ec;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    }
 
-        main {
-            display: flex;        
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center;     /* Centraliza verticalmente */
-        }
-
-        #caixa-logo {
-            text-align: center;
-            padding-bottom: 50px;
-            width: 300px;
-            height: 200px;
-            overflow: hidden; /* corta se a imagem ultrapassar */
-        }
-
-        #caixa-logo img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-        }
-
+    /* Media Query para telas menores */
+    @media (max-width: 500px) {
         footer {
-            display: flex;
-            text-align: center; 
-            flex-wrap: wrap;
-            padding-left: 50px;
+            flex-direction: column; /* Elementos um abaixo do outro */
+            align-items: center; /* Centraliza itens verticalmente */
         }
 
         footer div {
-            margin: auto;
+            margin: 10px 0; /* Espaço entre os elementos do footer */
         }
 
-        footer h2 {
-            color: #d4ddb7;
+        header p {
+            padding-left: 25px;
+            font-size: 0.8em;
         }
 
-        footer p {
-            font-size: 0.7em;
+        footer {
+            padding-left: 0px;
         }
 
         #wpp {
-            padding-left: 60px;
+            padding-left: 0px;
         }
 
-        .button {
-            display: block;                
-            margin-top: 7px;
-            background-color: #464986;
-            color: rgb(194, 194, 194);
-            font-weight: bold;
-            font-size: 0.7em;
-            border: none;
-            border-radius: 30px;
-            padding: 10px 30px;
-            cursor: pointer;
 
-        }
-
-        #sdp {
-            margin-left: 23px;
-            padding-left: 50px;
-        }
-
-        /* Media Query para telas menores */
-        @media (max-width: 500px) {
-            footer {
-                flex-direction: column; /* Elementos um abaixo do outro */
-                align-items: center; /* Centraliza itens verticalmente */
-            }
-
-            footer div {
-                margin: 10px 0; /* Espaço entre os elementos do footer */
-            }
-
-            header p {
-                padding-left: 25px;
-                font-size: 0.8em;
-            }
-
-            footer {
-                padding-left: 0px;
-            }
-
-            #wpp {
-                padding-left: 0px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <p>VOLTAR</p>
-        </a>
-    </header>
-    <main>
-        <div id="caixa-logo">
-            <img src="imagens/divina providencia logo.png" alt="Logo divina providência">
-            <h1>Entre em contato</h1>
-        </div>
+<header>
+    <a href="index.html">
+        <p>VOLTAR</p>
+    </a>
+</header>
+<main>
+    <div id="caixa-logo">
+        <img src="imagens/divina providencia logo.png" alt="Logo divina providência">
+        <h1>Entre em contato</h1>
+    </div>
+    
+</main>
+<footer>
+    <div id="telefone">
+        <h2>Telefone</h2>
+        <p>(31) 3517-3994</p>
+        <p>(31) 3517-3993</p>
+    </div>
+    <div id="wpp">
+        <h2>WhatsApp</h2>
+        <button class="button" aria-label="Saiba mais sobre o curso de salgados" onclick="window.location.href='https://wa.me/5531986340676';">
+            (31) 9 8634-0676
+        </button>
+    </div>
+    <div id="redes-sociais">
+        <h2>Redes sociais</h2>
+        <button class="button" onclick="window.location.href='https://www.instagram.com/centrosdeformacaoprofissional';">CENTRO DE FORMAÇÃO PROFISSIONAL</button>
+        <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/sistemadivinaprovidencia?igsh=MWhrenY5MTIwdjJ1aQ=='">SISTEMA DIVINA PROVIDÊNCIA          </button>
         
-    </main>
-    <footer>
-        <div>
-            <h2>Telefone</h2>
-            <p>(31) 3517-3994</p>
-            <p>(31) 3517-3993</p>
-        </div>
-        <div id="wpp">
-            <h2>WhatsApp</h2>
-            <button class="button" aria-label="Saiba mais sobre o curso de salgados" onclick="window.location.href='https://wa.me/5531986340676';">
-                (31) 9 8634-0676
-            </button>
-        </div>
-        <div id="redes-sociais">
-            <h2>Redes sociais</h2>
-            <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/centrosdeformacaoprofissional';">CENTRO DE FORMAÇÃO PROFISSIONAL</button>
-            <button class="button" id="sdp" onclick="window.location.href='https://www.instagram.com/sistemadivinaprovidencia?igsh=MWhrenY5MTIwdjJ1aQ=='">SISTEMA DIVINA PROVIDÊNCIA</button>
-            
-        </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
