@@ -1,0 +1,168 @@
+body {
+    font-family: 'codec', sans-serif;
+    height: 100vh;
+    background: #d4ddb7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-top: 80px;
+}
+
+header a {
+    text-align: left;
+    display: block;
+    width: fit-content;
+    padding-left: 80px;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f1f2ef;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 180px;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 140px;
+    border-radius: 15px;
+}
+
+.botao {
+    background: #3d4423;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.balao {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.balao::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right: 10px solid black;
+}
+
+.botoes-balao {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoes-balao button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botoes-balao button:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card {
+    width: 40%;
+    margin: 10px auto;
+    }
+
+    header h1 {
+    font-size: 2.5em;
+    }
+
+    header a {
+    padding-left: 20px;
+    font-size: 0.9em;
+    }
+
+    header p {
+    font-size: 0.9em;
+    }
+
+    .botao {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    }
+
+    .balao {
+    width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+    font-size: 1.9em;
+    padding: 50px 0px 10px 0px;
+    }
+
+    header a {
+    padding-left: 20px;
+    font-weight: bold;
+    }
+
+    header p {
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    }
+
+    .botao {
+    padding: 8px 10px;
+    font-size: 0.8em;
+    }
+
+    .balao {
+    width: 90%;
+    }
+}

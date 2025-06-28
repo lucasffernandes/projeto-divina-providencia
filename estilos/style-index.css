@@ -1,0 +1,544 @@
+body {
+    font-family: 'codec', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 80px 0 0 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#conteudo {
+    font-size: 2em;
+    margin: 210px 0 0 35px;
+}
+
+#conteudo h1 {
+    color: #888f70;
+    font-size: 2.3em;
+    padding-left: 13px;
+}
+
+#conteudo p {
+    color: #8c6052;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 85px;
+}
+
+section#cena01 {
+    background: url('../imagens/imagem-inicial-grande.png') center/cover no-repeat;
+    height: 750px;
+}
+
+section#cena02 {
+    background-color: #888f70;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+section#cena02 p {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.5;
+    max-width: 800px;
+}
+    /* INICIO DE CEÇÃO */
+
+.course-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #faf9f5;
+    padding: 48px;
+    border-radius: 32px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+/* Left text block */
+.course-text {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    text-align: center;
+}
+
+/* Right content vertical stack */
+.course-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Image container with rounded corner on left side */
+.course-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+}
+.course-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+}
+
+/* Description */
+.course-description {
+    font-size: 1rem;
+    color: #3e3e3e;
+    line-height: 1.6;
+}
+
+/* Button style */
+.btn-learn-more {
+    align-self: start;
+    background-color: #8d6153;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 15px rgba(141,97,83,0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+.btn-learn-more:hover,
+.btn-learn-more:focus {
+    background-color: #9a6b60;
+    box-shadow: 0 12px 22px rgba(154,107,96,0.4);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+/* Icon from material icons - rotate link icon to match design */
+.btn-learn-more .material-icons {
+    font-size: 20px;
+    transform: rotate(-25deg);
+}
+
+/* FIM DE SEÇÃO */
+
+section#cena04 {
+    background-color: #888f70;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#caixa01, #caixa02 {
+    flex: 1 1 300px;
+}
+
+#caixa01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#caixa02 {
+    color: white;
+}
+
+#caixa02 h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#caixa02 p {
+    font-size: 1.2em;
+}
+
+#caixa02 button {
+    margin-top: 30px;
+    background-color: #464986;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+section#cena05 {
+    background-color: #d4ddb7;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+section#cena05 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.caixa {
+    background-color: #888f70;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.caixa img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.caixa p {
+    padding: 20px;
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+section#cena06 {
+    height: 700px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #eff0ec;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+#caixa-h1 {
+    background-color: #eff0ec;
+    width: 100%; /* Corrigido de 100vw para 100% */
+    padding: 20px;
+}
+
+#caixa-h1 h1 {
+    font-size: 4vw;
+    margin: 30px 30px 30px 70px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#caixa-depoimentos {
+    background-color: #eff0ec;
+    width: 100%; /* Corrigido de 100vw para 100% */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 1 1 100%;
+}
+
+.depoimento {
+    background-color: #d4ddb7;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.depoimento .texto {
+    color: #000;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex: 1;
+    word-break: break-word;
+}
+
+.depoimento strong {
+    display: block;
+    margin: 8px 0px 10px 0px;
+    color: #333;
+}
+
+@media (min-width: 1440px) {
+    /* main {
+    padding: 72px 32px 120px;
+    }*/
+    
+    .course-section {
+    max-width: 1400px;
+    gap: 72px;
+    padding: 64px;
+    border-radius: 40px;
+    }
+    .course-text {
+    font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+
+section#cena03 h2 { 
+    font-size: 2em;
+    margin: 20px 0;
+    text-align: center;
+    color: #888f70;
+    }
+
+}
+
+#texto {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#texto img {
+    max-width: 100%;
+    height: auto;
+    border-bottom-left-radius: 60px;
+    display: block;
+}
+
+#texto p {
+    margin-top: 15px;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+#texto button {
+    margin-top: 20px;
+    background-color: #8c6052;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+section#cena06 {
+    background-color: #eff0ec;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+}
+
+#caixa-h1 {
+    flex: 1 1 100%;
+}
+
+#caixa-depoimentos {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.depoimento {
+    background-color: #d4ddb7;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.depoimento .texto {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.depoimento strong {
+    display: block;
+    margin-top: 8px;
+    color: #333;
+} 
+
+/* SEÇÃO 03 */
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 40px;
+    }
+
+    #conteudo {
+        margin: 350px 20px 0 20px;
+        
+    }
+
+    #conteudo h1 {
+        color: #888f70;
+        font-size: 12vw;
+        padding-left: 13px;
+        padding-top: 10px;
+        background-color: rgba(255, 255, 255, 0.932);
+    }
+
+    #conteudo p {
+        color: #8c6052;
+        padding-left: 13px;
+        padding-top: 5px;
+        background-color: rgba(255, 255, 255, 0.932);
+    }
+
+
+    section#cena04 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section#cena03 h2, #caixa02 h1 {
+        font-size: 1.8em;
+    }
+
+    #texto p, #caixa02 p {
+        font-size: 1em;
+    } 
+
+    .depoimento {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #caixa-h1 h1 {
+        font-size: 7vw;
+        text-align: left;
+    }
+
+    .course-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 32px;
+        border-radius: 24px;
+    }
+    .course-text {
+        font-size: 1.5rem;
+        padding: 0 24px;
+        text-align: center;
+    }
+    .course-image-wrapper {
+        border-radius: 32px;
+        overflow: hidden;
+    }
+
+    .btn-learn-more {
+        justify-content: center;
+        width: 100%;
+        padding: 14px 0;
+    }
+
+}
+
+@media (max-width: 570px) {
+
+    section#cena01 {
+        background: url('../imagens/imagem-inicial-celular.png') center/cover no-repeat;
+        height: 750px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    section#cena02 p {
+        font-size: 1.3em;
+        line-height: 1.5;
+        max-width: 800px;
+    }
+
+    nav ul {
+        padding: 150px 0 0 20px;
+    }
+
+    nav ul li a {
+        color: #000;
+    }
+
+    #caixa-h1 h1 {
+        font-size: 1.5em;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 356px) {
+
+    nav ul {
+        padding: 200px 0 0 20px;
+    }
+
+    section#cena02 p {
+        font-size: 1.1em;
+    }
+
+    #conteudo p {
+        font-size: 0.5em;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-left: 70px;
+    }
+
+}

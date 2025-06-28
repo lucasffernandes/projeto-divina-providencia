@@ -1,0 +1,158 @@
+body {
+    font-family: 'codec', sans-serif;
+    background-color: #113801;
+    color: #eff0ec;
+}
+
+header {
+    height: 100px;
+}
+
+header ul {
+    padding: 80px 0px 0px 100px;
+}
+
+ul a{
+    color: #eff0ec;
+    text-decoration: none;
+    font-weight: bold;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+main {
+    display: flex;        
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    margin-bottom: 90px;
+}
+
+#caixa-logo {
+    text-align: center;
+    padding-bottom: 50px;
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /* corta se a imagem ultrapassar */
+}
+
+#caixa-logo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    text-align: center; 
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+
+footer div {
+    margin: auto;
+}
+
+footer h2 {
+    color: #d4ddb7;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+#wpp {
+    padding-left: 180px;
+    padding-bottom: 40px;
+}
+
+#wpp button {
+    background-color: #278d46;
+}
+
+#wpp i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+#redes-sociais button {
+    background-color: #ed6866;
+    margin-left: 23px;
+    padding-left: 35px;
+}
+
+.button {
+    display: block;                
+    margin-top: 7px;
+    background-color: #464986;
+    color: rgb(213, 211, 203, 1);
+    font-weight:bold;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    cursor: pointer;
+
+}
+
+#redes-sociais #sdp {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#redes-sociais i {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+#telefone {
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 950px) {
+
+    #wpp {
+        padding-left: 0px;
+    }
+
+    #telefone {
+
+    padding-left: 0px;
+    padding-bottom: 20px;
+    }
+
+}
+
+/* Media Query para telas menores */
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column; /* Elementos um abaixo do outro */
+        align-items: center; /* Centraliza itens verticalmente */
+    }
+
+    footer div {
+        margin: 10px 0; /* Espaço entre os elementos do footer */
+    }
+
+    header a {
+        padding-left: 25px;
+        font-size: 0.8em;
+    }
+
+    header ul {
+        padding: 70px 0px 0px 20px;
+    }
+
+    footer {
+        padding-left: 0px;
+    }
+
+    #wpp {
+        padding-left: 0px;
+    }
+
+
+}
